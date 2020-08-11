@@ -11,6 +11,7 @@
 #import "Person.h"
 #import "DBHelper.h"
 #import "Student.h"
+#import "studentDBHelper.h"
 
 @interface ViewController ()
 
@@ -25,6 +26,7 @@
 @property (nonatomic, strong) UIButton *dbSaveButton;
 @property (nonatomic, strong) UIButton *dbReadButton;
 @property (nonatomic, strong) Student *student;
+@property (nonatomic, strong) NSMutableArray *array;
 
 @end
 
@@ -214,6 +216,8 @@
 
 #pragma mark - FMDataBase
 - (void)initStudent {
+    self.array = [NSMutableArray array];
+    
     self.student = [[Student alloc] init];
     self.student.id = @"U20516092";
     self.student.name = @"许明洋";
@@ -221,11 +225,15 @@
     self.student.university = @"华中科技大学";
     self.student.age = 23;
     
-    self.student.id = @"U201516085";
-    self.student.name = @"郝燕挺";
-    self.student.college = @"管理学院";
-    self.student.university = @"华中科技大学";
-    self.student.age = 23;
+    [self.array addObject:self.student];
+    
+    Student *student1 = [[Student alloc] init];
+    student1.id = @"U201516085";
+    student1.name = @"郝燕挺";
+    student1.college = @"管理学院";
+    student1.university = @"华中科技大学";
+    student1.age = 23;
+    [self.array addObject:student1];
 }
 
 - (UIButton *)dbSaveButton {
@@ -254,12 +262,15 @@
 
 - (void)fmDataBaseSaveData {
     NSLog(@"FMDB存储数据");
-    [DBHelper saveObject:self.student];
+//    [DBHelper saveObject:self.student];
+//    [studentDBHelper insertStudentObject:self.student];
+    [studentDBHelper batchUpdateStudentObjects:self.array];
 }
 
 - (void)fmDataBaseReadData {
     NSLog(@"FMDB读取数据");
-    [DBHelper getDataWithKey:self.student.id];
+//    [DBHelper getDataWithKey:self.student.id];
+    [studentDBHelper removeFavouriteObject:self.student];
 }
 
 @end
