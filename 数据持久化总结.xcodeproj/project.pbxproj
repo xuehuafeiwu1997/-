@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		95A4BA4197AE50773C9B6850 /* libPods-数据持久化总结.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB4D206EE61B39BC4EB25D1 /* libPods-数据持久化总结.a */; };
+		B681960C24E23B7400172C17 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = B681960B24E23B7400172C17 /* Student.m */; };
 		B6ED916624E0F9420011CB8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ED916524E0F9420011CB8A /* AppDelegate.m */; };
 		B6ED916C24E0F9420011CB8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ED916B24E0F9420011CB8A /* ViewController.m */; };
 		B6ED917124E0F94A0011CB8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6ED917024E0F94A0011CB8A /* Assets.xcassets */; };
 		B6ED917424E0F94A0011CB8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6ED917224E0F94A0011CB8A /* LaunchScreen.storyboard */; };
 		B6ED917724E0F94A0011CB8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ED917624E0F94A0011CB8A /* main.m */; };
 		B6ED918024E122AB0011CB8A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ED917F24E122AB0011CB8A /* Person.m */; };
+		B6ED918724E15F220011CB8A /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ED918624E15F220011CB8A /* DBHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		579ED9589AB3A8685B15DE35 /* Pods-数据持久化总结.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-数据持久化总结.debug.xcconfig"; path = "Target Support Files/Pods-数据持久化总结/Pods-数据持久化总结.debug.xcconfig"; sourceTree = "<group>"; };
 		6DB4D206EE61B39BC4EB25D1 /* libPods-数据持久化总结.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-数据持久化总结.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B681960A24E23B7400172C17 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		B681960B24E23B7400172C17 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		B6ED916124E0F9420011CB8A /* 数据持久化总结.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "数据持久化总结.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6ED916424E0F9420011CB8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B6ED916524E0F9420011CB8A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		B6ED917624E0F94A0011CB8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6ED917E24E122AB0011CB8A /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		B6ED917F24E122AB0011CB8A /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		B6ED918524E15F220011CB8A /* DBHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
+		B6ED918624E15F220011CB8A /* DBHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
 		FFBEBCA4BD6A1C22C6FEE470 /* Pods-数据持久化总结.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-数据持久化总结.release.xcconfig"; path = "Target Support Files/Pods-数据持久化总结/Pods-数据持久化总结.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +89,7 @@
 		B6ED916324E0F9420011CB8A /* 数据持久化总结 */ = {
 			isa = PBXGroup;
 			children = (
+				B6ED918424E15F070011CB8A /* SimpleFMDB */,
 				B6ED916424E0F9420011CB8A /* AppDelegate.h */,
 				B6ED916524E0F9420011CB8A /* AppDelegate.m */,
 				B6ED916A24E0F9420011CB8A /* ViewController.h */,
@@ -95,6 +102,17 @@
 				B6ED917624E0F94A0011CB8A /* main.m */,
 			);
 			path = "数据持久化总结";
+			sourceTree = "<group>";
+		};
+		B6ED918424E15F070011CB8A /* SimpleFMDB */ = {
+			isa = PBXGroup;
+			children = (
+				B681960A24E23B7400172C17 /* Student.h */,
+				B681960B24E23B7400172C17 /* Student.m */,
+				B6ED918524E15F220011CB8A /* DBHelper.h */,
+				B6ED918624E15F220011CB8A /* DBHelper.m */,
+			);
+			path = SimpleFMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,8 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6ED916C24E0F9420011CB8A /* ViewController.m in Sources */,
+				B6ED918724E15F220011CB8A /* DBHelper.m in Sources */,
 				B6ED916624E0F9420011CB8A /* AppDelegate.m in Sources */,
 				B6ED918024E122AB0011CB8A /* Person.m in Sources */,
+				B681960C24E23B7400172C17 /* Student.m in Sources */,
 				B6ED917724E0F94A0011CB8A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

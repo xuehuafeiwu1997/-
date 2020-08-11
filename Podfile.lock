@@ -1,16 +1,26 @@
 PODS:
+  - FCFileManager (1.0.20)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
+  - FCFileManager
+  - FMDB (~> 2.7.2)
   - Masonry
 
 SPEC REPOS:
   trunk:
+    - FCFileManager
+    - FMDB
     - Masonry
 
 SPEC CHECKSUMS:
+  FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 4e0a0093c7f43f0ad6a46fbd73a5cb826e28a9cb
+PODFILE CHECKSUM: 510e05f63024cded512a28b78aea3e3a6ab12632
 
 COCOAPODS: 1.9.0

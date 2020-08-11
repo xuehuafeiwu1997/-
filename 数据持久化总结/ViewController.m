@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "Masonry.h"
 #import "Person.h"
+#import "DBHelper.h"
+#import "Student.h"
 
 @interface ViewController ()
 
@@ -19,6 +21,10 @@
 @property (nonatomic, strong) UIButton *unarchiveButton;
 @property (nonatomic, strong) Person *person;
 @property (nonatomic, copy) NSString *documentPath;
+
+@property (nonatomic, strong) UIButton *dbSaveButton;
+@property (nonatomic, strong) UIButton *dbReadButton;
+@property (nonatomic, strong) Student *student;
 
 @end
 
@@ -31,6 +37,7 @@
     self.title = @"数据持久化总结";
     self.navigationController.navigationBar.translucent = NO;
     self.person =  [[Person alloc] init];
+    [self initStudent];
     
     [self.view addSubview:self.NSUserDefaultWriteButton];
     [self.NSUserDefaultWriteButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -58,6 +65,21 @@
     [self.unarchiveButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
         make.top.equalTo(self.archiveButton.mas_bottom).offset(20);
+        make.width.greaterThanOrEqualTo(@0);
+        make.height.equalTo(@30);
+    }];
+    
+    [self.view addSubview:self.dbSaveButton];
+    [self.dbSaveButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.unarchiveButton.mas_bottom).offset(20);
+        make.width.greaterThanOrEqualTo(@0);
+        make.height.equalTo(@30);
+    }];
+    [self.view addSubview:self.dbReadButton];
+    [self.dbReadButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.dbSaveButton.mas_bottom).offset(20);
         make.width.greaterThanOrEqualTo(@0);
         make.height.equalTo(@30);
     }];
@@ -188,6 +210,56 @@
     }
     NSLog(@"归档路径为：%@",_documentPath);
     return _documentPath;
+}
+
+#pragma mark - FMDataBase
+- (void)initStudent {
+    self.student = [[Student alloc] init];
+    self.student.id = @"U20516092";
+    self.student.name = @"许明洋";
+    self.student.college = @"管理学院";
+    self.student.university = @"华中科技大学";
+    self.student.age = 23;
+    
+    self.student.id = @"U201516085";
+    self.student.name = @"郝燕挺";
+    self.student.college = @"管理学院";
+    self.student.university = @"华中科技大学";
+    self.student.age = 23;
+}
+
+- (UIButton *)dbSaveButton {
+    if (_dbSaveButton) {
+        return _dbSaveButton;
+    }
+    _dbSaveButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    _dbSaveButton.titleLabel.font = [UIFont systemFontOfSize:18];
+    [_dbSaveButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_dbSaveButton setTitle:@"FMDataBase存储数据" forState:UIControlStateNormal];
+    [_dbSaveButton addTarget:self action:@selector(fmDataBaseSaveData) forControlEvents:UIControlEventTouchUpInside];
+    return _dbSaveButton;
+}
+
+- (UIButton *)dbReadButton {
+    if (_dbReadButton) {
+        return _dbReadButton;
+    }
+    _dbReadButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    _dbReadButton.titleLabel.font = [UIFont systemFontOfSize:18];
+    [_dbReadButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_dbReadButton setTitle:@"FMDataBase读取数据" forState:UIControlStateNormal];
+    [_dbReadButton addTarget:self action:@selector(fmDataBaseReadData) forControlEvents:UIControlEventTouchUpInside];
+    return _dbReadButton;
+}
+
+- (void)fmDataBaseSaveData {
+    NSLog(@"FMDB存储数据");
+    [DBHelper saveObject:self.student];
+}
+
+- (void)fmDataBaseReadData {
+    NSLog(@"FMDB读取数据");
+    [DBHelper getDataWithKey:self.student.id];
 }
 
 @end
