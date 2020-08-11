@@ -271,6 +271,7 @@
     NSLog(@"FMDB读取数据");
 //    [DBHelper getDataWithKey:self.student.id];
     [studentDBHelper removeFavouriteObject:self.student];
+    
 }
 
 @end

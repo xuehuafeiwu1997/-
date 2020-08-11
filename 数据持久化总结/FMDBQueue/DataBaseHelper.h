@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)batchUpdate:(void(^)(FMDatabase *db))block;
 
++ (NSArray *)getRows:(NSString *)sql, ...;
+
 @end
 
 NS_ASSUME_NONNULL_END
