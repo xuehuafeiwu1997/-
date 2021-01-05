@@ -59,7 +59,7 @@
     [ud setObject:dic forKey:@"Dictionary"];
     NSLog(@"写入数据结束");
     
-    //NSUserDefault写入数据，默认放在library/perence文件夹下，以.plist文件存放
+    //NSUserDefault写入数据，默认放在library/Preferences文件夹下，以.plist文件存放
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *path = [paths objectAtIndex:0];
