@@ -11,6 +11,7 @@
 		B681960C24E23B7400172C17 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = B681960B24E23B7400172C17 /* Student.m */; };
 		B681961024E277BE00172C17 /* DataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B681960F24E277BE00172C17 /* DataBaseHelper.m */; };
 		B681961324E289C500172C17 /* studentDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B681961224E289C500172C17 /* studentDBHelper.m */; };
+		B6DA8E27258B7452000A401C /* NSUserDefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DA8E26258B7452000A401C /* NSUserDefaultViewController.m */; };
 		B6ED916624E0F9420011CB8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ED916524E0F9420011CB8A /* AppDelegate.m */; };
 		B6ED916C24E0F9420011CB8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ED916B24E0F9420011CB8A /* ViewController.m */; };
 		B6ED917124E0F94A0011CB8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6ED917024E0F94A0011CB8A /* Assets.xcassets */; };
@@ -29,6 +30,8 @@
 		B681960F24E277BE00172C17 /* DataBaseHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseHelper.m; sourceTree = "<group>"; };
 		B681961124E289C500172C17 /* studentDBHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = studentDBHelper.h; sourceTree = "<group>"; };
 		B681961224E289C500172C17 /* studentDBHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = studentDBHelper.m; sourceTree = "<group>"; };
+		B6DA8E25258B7452000A401C /* NSUserDefaultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultViewController.h; sourceTree = "<group>"; };
+		B6DA8E26258B7452000A401C /* NSUserDefaultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultViewController.m; sourceTree = "<group>"; };
 		B6ED916124E0F9420011CB8A /* 数据持久化总结.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "数据持久化总结.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6ED916424E0F9420011CB8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B6ED916524E0F9420011CB8A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 				B6ED916524E0F9420011CB8A /* AppDelegate.m */,
 				B6ED916A24E0F9420011CB8A /* ViewController.h */,
 				B6ED916B24E0F9420011CB8A /* ViewController.m */,
+				B6DA8E25258B7452000A401C /* NSUserDefaultViewController.h */,
+				B6DA8E26258B7452000A401C /* NSUserDefaultViewController.m */,
 				B6ED917E24E122AB0011CB8A /* Person.h */,
 				B6ED917F24E122AB0011CB8A /* Person.m */,
 				B6ED917024E0F94A0011CB8A /* Assets.xcassets */,
@@ -232,6 +237,7 @@
 				B681961324E289C500172C17 /* studentDBHelper.m in Sources */,
 				B681961024E277BE00172C17 /* DataBaseHelper.m in Sources */,
 				B6ED918724E15F220011CB8A /* DBHelper.m in Sources */,
+				B6DA8E27258B7452000A401C /* NSUserDefaultViewController.m in Sources */,
 				B6ED916624E0F9420011CB8A /* AppDelegate.m in Sources */,
 				B6ED918024E122AB0011CB8A /* Person.m in Sources */,
 				B681960C24E23B7400172C17 /* Student.m in Sources */,

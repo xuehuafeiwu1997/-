@@ -120,7 +120,7 @@
     [ud setObject:num forKey:@"NUM"];
     [ud setBool:YES forKey:@"BOOL"];
     [ud setFloat:1.8 forKey:@"float"];
-    [ud setObject:@"许明洋" forKey:@"Name"];
+    [ud setObject:@"落叶兮兮" forKey:@"Name"];
     NSArray *array = [NSArray arrayWithObjects:@"11",@"22",@"33",nil];
     [ud setObject:array forKey:@"ARRAY"];
     NSLog(@"写入数据结束");
@@ -219,19 +219,19 @@
     self.array = [NSMutableArray array];
     
     self.student = [[Student alloc] init];
-    self.student.id = @"U20516092";
-    self.student.name = @"许明洋";
+    self.student.id = @"1234757583";
+    self.student.name = @"落叶兮兮";
     self.student.college = @"管理学院";
-    self.student.university = @"华中科技大学";
+    self.student.university = @"家里蹲大学";
     self.student.age = 23;
     
     [self.array addObject:self.student];
     
     Student *student1 = [[Student alloc] init];
-    student1.id = @"U201516085";
-    student1.name = @"郝燕挺";
+    student1.id = @"1244384995343";
+    student1.name = @"xuehuafeiwu";
     student1.college = @"管理学院";
-    student1.university = @"华中科技大学";
+    student1.university = @"情报大学";
     student1.age = 23;
     [self.array addObject:student1];
 }

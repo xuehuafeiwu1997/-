@@ -68,6 +68,9 @@ static NSString * const kColumnAge = @"age";
 }
 
 + (void)removeFavouriteObject:(Student *)student {
+    NSString *sql = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE %@ = ?",kTableName,kColumnID];
+    NSArray *result = [DataBaseHelper getRows:sql,student.id];
+    NSLog(@"当前的result为:%@",result);
     NSString *deleteSql = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = ?",kTableName,kColumnID];
     [DataBaseHelper batchUpdate:^(FMDatabase * _Nonnull db) {
         [db executeUpdate:deleteSql,student.id];
