@@ -138,7 +138,7 @@
 
 #pragma mark - 归档/解档
 - (UIButton *)archiveButton {
-    if (_archiveButton) {;
+    if (_archiveButton) {
         return _archiveButton;
     }
     _archiveButton = [[UIButton alloc] initWithFrame:CGRectZero];
@@ -221,17 +221,17 @@
     self.student = [[Student alloc] init];
     self.student.id = @"1234757583";
     self.student.name = @"落叶兮兮";
-    self.student.college = @"管理学院";
-    self.student.university = @"家里蹲大学";
+    self.student.college = @"学院1";
+    self.student.university = @"大学1";
     self.student.age = 23;
     
     [self.array addObject:self.student];
     
     Student *student1 = [[Student alloc] init];
     student1.id = @"1244384995343";
-    student1.name = @"xuehuafeiwu";
-    student1.college = @"管理学院";
-    student1.university = @"情报大学";
+    student1.name = @"雪花飞舞";
+    student1.college = @"学院2";
+    student1.university = @"大学2";
     student1.age = 23;
     [self.array addObject:student1];
 }

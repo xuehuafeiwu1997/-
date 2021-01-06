@@ -9,6 +9,10 @@
 #import "Person.h"
 #import <objc/runtime.h>
 
+@interface Person()
+
+@end
+
 @implementation Person
 
 - (void)setName:(NSString *)name age:(NSInteger)age {
@@ -32,4 +36,8 @@
     return self;
 }
 
++ (BOOL)supportsSecureCoding {
+    NSLog(@"执行了这个方法");
+    return YES;
+}
 @end
