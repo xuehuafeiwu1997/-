@@ -59,13 +59,6 @@ static NSString * const kColumnAge = @"age";
 + (id)getDataWithKey:(NSString *)key {
     NSString *searchSql = nil;
     FMResultSet *set = nil;
-//    if (key.length > 0) {
-//     searchSql = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE %@ = ?",kTableName,kColumnID];
-//        set = [db executeQuery:searchSql,key];
-//    } else {
-//        searchSql = [NSString stringWithFormat:@"SELECT * FROM %@",kTableName];
-//        set = [db executeQuery:searchSql];
-//    }
     searchSql = [NSString stringWithFormat:@"SELECT * FROM %@",kTableName];
     set = [db executeQuery:searchSql];
     //执行sql语句，在FMDB中，除了查询语句使用executQuery外，其余的增删改查都使用executeUpdate来实现。
@@ -93,8 +86,6 @@ static NSString * const kColumnAge = @"age";
 
 + (BOOL)delete:(Student *)student {
     BOOL success = YES;
-//    NSString *deleteSql = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = ? AND %@ = ? AND %@ = ? AND %@ = ? AND %@ = ?",kTableName,kColumnID,kColumnName,kColumnCollege,kColumnUniversity,kColumnAge];
-//     BOOL isCan = [db executeUpdate:deleteSql,student.id,student.name,student.college,student.university,@(student.age)];
     NSString *deleteSql = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = ?",kTableName,kColumnID];
     BOOL isCan = [db executeUpdate:deleteSql,student.id];
     if (!isCan) {
