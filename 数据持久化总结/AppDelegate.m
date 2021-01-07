@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "NSUserDefaultViewController.h"
+#import "ArchiveViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +25,8 @@
     [self.window makeKeyAndVisible];
     
 //    ViewController *vc = [[ViewController alloc] init];
-    NSUserDefaultViewController *vc = [[NSUserDefaultViewController alloc] init];
+//    NSUserDefaultViewController *vc = [[NSUserDefaultViewController alloc] init];
+    ArchiveViewController *vc = [[ArchiveViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     return YES;
