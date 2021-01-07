@@ -80,15 +80,10 @@
 
 - (void)unarchiveData {
     NSLog(@"开始解档数据");
-    NSError *error = nil;
-    
     //使用NSKeyedUnarchiver类方法解析
-    NSData *data = [NSData dataWithContentsOfFile:self.path1 options:NSDataReadingMapped error:&error];
-    if (error) {
-        NSLog(@"读取文件失败，失败的原因是%@",error);
-    }
+    NSData *data1 = [NSData dataWithContentsOfFile:self.path1];
     NSError *error1 = nil;
-    Human *human1 = [NSKeyedUnarchiver unarchivedObjectOfClass:[Human class] fromData:data error:&error1];
+    Human *human1 = [NSKeyedUnarchiver unarchivedObjectOfClass:[Human class] fromData:data1 error:&error1];
     if (error1) {
         NSLog(@"解档数据失败,失败的原因是%@",error1);
     } else {
@@ -98,7 +93,8 @@
     
     //使用NSKeyedUnarchiver实例方法解析
     NSError *error2 = nil;
-    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:data error:&error2];
+    NSData *data2 = [NSData dataWithContentsOfFile:self.path2];
+    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:data2 error:&error2];
     Human *human2 = [unarchiver decodeObjectOfClass:[Human class] forKey:@"Human"];
     [unarchiver finishDecoding];
     if (error2) {
@@ -116,6 +112,7 @@
     }
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     _path1 = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Data1"];
+    NSLog(@"path1 = %@",_path1);
     return _path1;
 }
 
@@ -125,6 +122,7 @@
     }
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     _path2 = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Data2"];
+    NSLog(@"path2 = %@",_path2);
     return _path2;
 }
 
