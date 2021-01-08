@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		95A4BA4197AE50773C9B6850 /* libPods-数据持久化总结.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB4D206EE61B39BC4EB25D1 /* libPods-数据持久化总结.a */; };
 		B6214B8D25A71068005B508D /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6214B8C25A71068005B508D /* FMDBViewController.m */; };
+		B65B168E25A8586200C87D77 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B65B168D25A8586200C87D77 /* MainViewController.m */; };
+		B65B169225A85CB200C87D77 /* FMDBQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B65B169125A85CB200C87D77 /* FMDBQueueViewController.m */; };
 		B681960C24E23B7400172C17 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = B681960B24E23B7400172C17 /* Student.m */; };
 		B681961024E277BE00172C17 /* DataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B681960F24E277BE00172C17 /* DataBaseHelper.m */; };
 		B681961324E289C500172C17 /* studentDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B681961224E289C500172C17 /* studentDBHelper.m */; };
@@ -29,6 +31,10 @@
 		6DB4D206EE61B39BC4EB25D1 /* libPods-数据持久化总结.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-数据持久化总结.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6214B8B25A71068005B508D /* FMDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBViewController.h; sourceTree = "<group>"; };
 		B6214B8C25A71068005B508D /* FMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
+		B65B168C25A8586200C87D77 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B65B168D25A8586200C87D77 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		B65B169025A85CB200C87D77 /* FMDBQueueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBQueueViewController.h; sourceTree = "<group>"; };
+		B65B169125A85CB200C87D77 /* FMDBQueueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBQueueViewController.m; sourceTree = "<group>"; };
 		B681960A24E23B7400172C17 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		B681960B24E23B7400172C17 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		B681960E24E277BE00172C17 /* DataBaseHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseHelper.h; sourceTree = "<group>"; };
@@ -86,6 +92,28 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B65B169425A85CBA00C87D77 /* NSUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				B6DA8E25258B7452000A401C /* NSUserDefaultViewController.h */,
+				B6DA8E26258B7452000A401C /* NSUserDefaultViewController.m */,
+				B6ED917E24E122AB0011CB8A /* Person.h */,
+				B6ED917F24E122AB0011CB8A /* Person.m */,
+			);
+			path = NSUserDefaults;
+			sourceTree = "<group>";
+		};
+		B65B169525A85CCE00C87D77 /* 归档解档 */ = {
+			isa = PBXGroup;
+			children = (
+				B6DB02CF25A5AA4000888C85 /* ArchiveViewController.h */,
+				B6DB02D025A5AA4000888C85 /* ArchiveViewController.m */,
+				B6DB02D325A5AE8200888C85 /* Human.h */,
+				B6DB02D425A5AE8200888C85 /* Human.m */,
+			);
+			path = "归档解档";
+			sourceTree = "<group>";
+		};
 		B681960D24E2778A00172C17 /* FMDBQueue */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +121,8 @@
 				B681960F24E277BE00172C17 /* DataBaseHelper.m */,
 				B681961124E289C500172C17 /* studentDBHelper.h */,
 				B681961224E289C500172C17 /* studentDBHelper.m */,
+				B65B169025A85CB200C87D77 /* FMDBQueueViewController.h */,
+				B65B169125A85CB200C87D77 /* FMDBQueueViewController.m */,
 			);
 			path = FMDBQueue;
 			sourceTree = "<group>";
@@ -118,20 +148,16 @@
 		B6ED916324E0F9420011CB8A /* 数据持久化总结 */ = {
 			isa = PBXGroup;
 			children = (
+				B65B169525A85CCE00C87D77 /* 归档解档 */,
+				B65B169425A85CBA00C87D77 /* NSUserDefaults */,
 				B681960D24E2778A00172C17 /* FMDBQueue */,
 				B6ED918424E15F070011CB8A /* SimpleFMDB */,
 				B6ED916424E0F9420011CB8A /* AppDelegate.h */,
 				B6ED916524E0F9420011CB8A /* AppDelegate.m */,
+				B65B168C25A8586200C87D77 /* MainViewController.h */,
+				B65B168D25A8586200C87D77 /* MainViewController.m */,
 				B6ED916A24E0F9420011CB8A /* ViewController.h */,
 				B6ED916B24E0F9420011CB8A /* ViewController.m */,
-				B6DA8E25258B7452000A401C /* NSUserDefaultViewController.h */,
-				B6DA8E26258B7452000A401C /* NSUserDefaultViewController.m */,
-				B6ED917E24E122AB0011CB8A /* Person.h */,
-				B6ED917F24E122AB0011CB8A /* Person.m */,
-				B6DB02CF25A5AA4000888C85 /* ArchiveViewController.h */,
-				B6DB02D025A5AA4000888C85 /* ArchiveViewController.m */,
-				B6DB02D325A5AE8200888C85 /* Human.h */,
-				B6DB02D425A5AE8200888C85 /* Human.m */,
 				B6ED917024E0F94A0011CB8A /* Assets.xcassets */,
 				B6ED917224E0F94A0011CB8A /* LaunchScreen.storyboard */,
 				B6ED917524E0F94A0011CB8A /* Info.plist */,
@@ -249,9 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6ED916C24E0F9420011CB8A /* ViewController.m in Sources */,
+				B65B169225A85CB200C87D77 /* FMDBQueueViewController.m in Sources */,
 				B681961324E289C500172C17 /* studentDBHelper.m in Sources */,
 				B681961024E277BE00172C17 /* DataBaseHelper.m in Sources */,
 				B6214B8D25A71068005B508D /* FMDBViewController.m in Sources */,
+				B65B168E25A8586200C87D77 /* MainViewController.m in Sources */,
 				B6ED918724E15F220011CB8A /* DBHelper.m in Sources */,
 				B6DA8E27258B7452000A401C /* NSUserDefaultViewController.m in Sources */,
 				B6ED916624E0F9420011CB8A /* AppDelegate.m in Sources */,

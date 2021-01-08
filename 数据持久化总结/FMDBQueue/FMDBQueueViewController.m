@@ -1,26 +1,25 @@
 //
-//  FMDBViewController.m
+//  FMDBQueueViewController.m
 //  数据持久化总结
 //
-//  Created by 许明洋 on 2021/1/7.
+//  Created by 许明洋 on 2021/1/8.
 //  Copyright © 2021 许明洋. All rights reserved.
 //
 
-#import "FMDBViewController.h"
+#import "FMDBQueueViewController.h"
 #import "Student.h"
-#import "DBHelper.h"
+#import "studentDBHelper.h"
 #import "Masonry.h"
 
-@interface FMDBViewController ()
+@interface FMDBQueueViewController ()
 
 @property (nonatomic, strong) UIButton *dbSaveButton;
 @property (nonatomic, strong) UIButton *dbReadButton;
 @property (nonatomic, strong) NSMutableArray *array;
 
-
 @end
 
-@implementation FMDBViewController
+@implementation FMDBQueueViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -95,12 +94,16 @@
 
 - (void)fmDataBaseSaveData {
     NSLog(@"FMDB存储数据");
-    [DBHelper saveObjects:self.array];
+    [studentDBHelper batchUpdateStudentObjects:self.array];
 }
 
 - (void)fmDataBaseReadData {
-    NSLog(@"FMDB读取数据");
-    [DBHelper getAllName];
+    NSLog(@"FMDB删除单条数据");
+    if (self.array.count <= 0) {
+        return;
+    }
+    Student *student = [self.array objectAtIndex:0];
+    [studentDBHelper removeFavouriteObject:student];
 }
 
 @end

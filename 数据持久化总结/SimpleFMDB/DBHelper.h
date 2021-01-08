@@ -14,8 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DBHelper : NSObject
 
-//根据所给的参数去获取数据
+//获取所有的名字
 + (id)getAllName;
+
+//删除数据
++ (BOOL)delete:(Student *)student;
 
 //将数据存储在FMDataBase中
 + (void)saveObject:(Student *)student;

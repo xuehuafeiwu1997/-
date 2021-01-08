@@ -8,9 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "NSUserDefaultViewController.h"
-#import "ArchiveViewController.h"
-#import "FMDBViewController.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,10 +23,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     
-//    ViewController *vc = [[ViewController alloc] init];
-//    NSUserDefaultViewController *vc = [[NSUserDefaultViewController alloc] init];
-//    ArchiveViewController *vc = [[ArchiveViewController alloc] init];
-    FMDBViewController *vc = [[FMDBViewController alloc] init];
+    MainViewController *vc = [[MainViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     return YES;
