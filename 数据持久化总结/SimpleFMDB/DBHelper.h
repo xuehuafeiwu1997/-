@@ -15,11 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DBHelper : NSObject
 
 //根据所给的参数去获取数据
-+ (id)getDataWithKey:(NSString *)key;
++ (id)getAllName;
 
 //将数据存储在FMDataBase中
 + (void)saveObject:(Student *)student;
 
+//存储多条数据进入表中
 + (void)saveObjects:(NSArray *)array;
 
 @end

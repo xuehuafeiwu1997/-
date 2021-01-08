@@ -57,17 +57,17 @@ static NSString * const kColumnAge = @"age";
     }
 }
 
-+ (id)getDataWithKey:(NSString *)key {
++ (id)getAllName {
     NSString *searchSql = nil;
     FMResultSet *set = nil;
     searchSql = [NSString stringWithFormat:@"SELECT * FROM %@",kTableName];
     set = [db executeQuery:searchSql];
     //执行sql语句，在FMDB中，除了查询语句使用executQuery外，其余的增删改查都使用executeUpdate来实现。
+    int i = 0;
     while (set.next) {
+        i++;
         NSString *name = [set stringForColumn:@"name"];
-        NSLog(@"根据当前的查询得到名字为:%@",name);
-        NSString *college = [set stringForColumnIndex:1];
-        NSLog(@"第一个是%@",college);
+        NSLog(@"第%d个名字为:%@",i,name);
     }
     return @[];
 }

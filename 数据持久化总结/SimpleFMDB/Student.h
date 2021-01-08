@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *university;
 @property (nonatomic, assign) NSInteger age;
 
-
 @end
 
 NS_ASSUME_NONNULL_END

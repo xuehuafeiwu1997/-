@@ -101,8 +101,7 @@
 
 - (void)fmDataBaseReadData {
     NSLog(@"FMDB读取数据");
-    Student *student = [self.array objectAtIndex:0];
-    [DBHelper getDataWithKey:student.name];
+    [DBHelper getAllName];
 }
 
 @end
