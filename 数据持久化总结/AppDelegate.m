@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "NSUserDefaultViewController.h"
 #import "ArchiveViewController.h"
+#import "FMDBViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,7 +27,8 @@
     
 //    ViewController *vc = [[ViewController alloc] init];
 //    NSUserDefaultViewController *vc = [[NSUserDefaultViewController alloc] init];
-    ArchiveViewController *vc = [[ArchiveViewController alloc] init];
+//    ArchiveViewController *vc = [[ArchiveViewController alloc] init];
+    FMDBViewController *vc = [[FMDBViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     return YES;

@@ -26,6 +26,7 @@ static NSString * const kColumnAge = @"age";
 }
 
 + (void)initialize {
+    NSLog(@"数据库的存储路径为:%@",[self dbFilePath]);
     db = [FMDatabase databaseWithPath:[self dbFilePath]];
     if (![db open]) {
         NSLog(@"数据库无法开启");
@@ -81,6 +82,19 @@ static NSString * const kColumnAge = @"age";
         NSLog(@"插入数据成功");
     } else {
         NSLog(@"插入数据失败");
+    }
+}
+
++ (void)saveObjects:(NSArray *)array {
+    if (array.count <= 0) {
+        NSLog(@"保存的数据不能为空");
+        return;
+    }
+    for (int i = 0; i < array.count; i++) {
+        Student *student = (Student *)[array objectAtIndex:i];
+        if (student) {
+            [self saveObject:student];
+        }
     }
 }
 

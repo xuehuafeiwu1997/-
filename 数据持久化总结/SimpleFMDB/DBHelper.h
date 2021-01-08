@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 //将数据存储在FMDataBase中
 + (void)saveObject:(Student *)student;
 
++ (void)saveObjects:(NSArray *)array;
+
 @end
 
 NS_ASSUME_NONNULL_END
